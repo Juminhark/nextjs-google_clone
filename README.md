@@ -43,11 +43,12 @@ module.exports = {
 };
 ```
 
+- jit : yarn dev => 바로바로 반영해서 빠른 개발
+
 ```js
 // styles/globals.css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 ```
