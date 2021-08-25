@@ -8,7 +8,28 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<h1 className="p-20">Google 123</h1>
+			{/* Header */}
+			<header>
+				{/* Left Section */}
+				<div className="flex space-x-4 items-center">
+					<p>About</p>
+					<p>Store</p>
+				</div>
+
+				{/* Right Section */}
+				<div className="flex space-x-4 items-center">
+					<p>Gmail</p>
+					<p>Images</p>
+
+					{/* Icon */}
+
+					{/* Avatar */}
+				</div>
+			</header>
+
+			{/* Body */}
+
+			{/* Footer */}
 		</div>
 	);
 }
