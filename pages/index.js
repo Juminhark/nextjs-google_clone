@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Avatar from '../components/Avatar';
 
 export default function Home() {
 	return (
@@ -13,17 +14,19 @@ export default function Home() {
 				{/* Left Section */}
 				<div className="flex space-x-4 items-center">
 					<p className="link">About</p>
-					<p>Store</p>
+					<p className="link">Store</p>
 				</div>
 
 				{/* Right Section */}
 				<div className="flex space-x-4 items-center">
-					<p>Gmail</p>
-					<p>Images</p>
+					<p className="link">Gmail</p>
+					<p className="link">Images</p>
 
 					{/* Icon */}
 
-					{/* Avatar */}
+					{/* crl + spacebar : 자동 import */}
+
+					<Avatar url="http://coaching.papareact.com/ai9" />
 				</div>
 			</header>
 
