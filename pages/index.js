@@ -1,5 +1,13 @@
 import Head from 'next/head';
 import Avatar from '../components/Avatar';
+import { MicrophoneIcon, ViewGridIcon } from '@heroicons/react/solid';
+import { SearchIcon } from '@heroicons/react/outline';
+
+import Image from 'next/image';
+
+{
+	/* crl + spacebar : 자동 import */
+}
 
 export default function Home() {
 	return (
@@ -23,14 +31,26 @@ export default function Home() {
 					<p className="link">Images</p>
 
 					{/* Icon */}
-
-					{/* crl + spacebar : 자동 import */}
+					<ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer" />
 
 					<Avatar url="http://coaching.papareact.com/ai9" />
 				</div>
 			</header>
 
 			{/* Body */}
+			<form>
+				<Image
+					src="https://www.google.co.uk/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+					height={100}
+					width={300}
+				/>
+
+				<div className="flex w-full mt-5 hover:shadow-lg focus-within:shadow-lg max-w-md rounded-sm">
+					<SearchIcon className="h-5 mr-3 text-gray-500" />
+					<input type="text" className="flex-grow  focus:outline-none" />
+					<MicrophoneIcon className="h-5" />
+				</div>
+			</form>
 
 			{/* Footer */}
 		</div>
