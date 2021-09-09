@@ -109,3 +109,5 @@ flex; // 옆으로 배열
 w - full; // width 최대
 mt - 5; // margin-top
 ```
+
+## [event.preventDefault](https://developer.mozilla.org/ko/docs/Web/API/Event/preventDefault)
