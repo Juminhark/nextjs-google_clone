@@ -59,6 +59,8 @@ module.exports = {
 > yarn add @heroicons/react
 ```
 
+## Mobile first design
+
 ## Components
 
 - 기능 추가를 위한 component
@@ -101,13 +103,39 @@ h;
 mr; // margin
 cursor - pointer;
 focus: outline - none; // focus 됬을때 outline 없이
-transition; // 어떻게
-duration: 150; // 속도
-transform; // 무엇으로
-hover: scale - 110; // 마우스 올렸을때 : 110확대
+transition duration: 150 transform hover: scale-110; // 속도 150 변화 / 마우스 올렸을때
 flex; // 옆으로 배열
 w - full; // width 최대
 mt - 5; // margin-top
+hidden sm:inline-flex // sm에서 안보인다
+flex-grow // size 커지는거 따라서 같이 커진다
+border-b-5 // border bottom 5size
 ```
 
 ## [event.preventDefault](https://developer.mozilla.org/ko/docs/Web/API/Event/preventDefault)
+
+## useRouter
+
+- url 이동
+
+```js
+import { useRouter } from 'next/router';
+
+const Home = () => {
+	const router = useRouter();
+
+	return <button onClick={() => router.push('/profile')}>profile</button>;
+};
+
+export default Home;
+```
+
+## building the Google Front Page
+
+## building the Header Component
+
+## building the Header Option(s) Component
+
+## building the Search Results
+
+- Google Search API
