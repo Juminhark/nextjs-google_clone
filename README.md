@@ -110,6 +110,11 @@ mt - 5; // margin-top
 hidden sm:inline-flex // sm에서 안보인다
 flex-grow // size 커지는거 따라서 같이 커진다
 border-b-5 // border bottom 5size
+
+
+<div className="group">
+	<div className="group-hover:underline">Click</div>
+</div>
 ```
 
 ## [event.preventDefault](https://developer.mozilla.org/ko/docs/Web/API/Event/preventDefault)
@@ -138,4 +143,23 @@ export default Home;
 
 ## building the Search Results
 
-- Google Search API
+- [Google Search API](https://developers.google.com/custom-search/v1/using_rest)
+
+## [tailwind line clamp](https://blog.tailwindcss.com/multi-line-truncation-with-tailwindcss-line-clamp)
+
+```sh
+> npm install @tailwindcss/line-clamp
+```
+
+```js
+// tailwind.config.js
+module.exports = {
+	// ...
+	plugins: [
+		// ...
+		require('@tailwindcss/line-clamp'),
+	],
+};
+
+<p className="line-clamp-2">{result.description}</p>;
+```

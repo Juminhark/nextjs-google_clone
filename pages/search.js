@@ -2,12 +2,11 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Header from '../components/Header';
 import SearchResults from '../components/SearchResults';
+import { API_KEY, CONTEXT_KEY } from '../keys';
 import Response from '../Response';
 
 function search({ results }) {
 	const router = useRouter();
-
-	console.log(results);
 
 	return (
 		<div>
@@ -27,23 +26,14 @@ function search({ results }) {
 export default search;
 
 export async function getServerSideProps(context) {
-	const useDummyData = true;
+	const useDummyData = false;
 
 	const startIndex = context.query.start || '0';
 
 	const data = useDummyData
 		? Response
 		: await fetch(
-				`https://google-search3.p.rapidapi.com/api/v1/search/q=${context.query.term}`,
-				{
-					method: 'GET',
-					headers: {
-						'x-user-agent': 'desktop',
-						'x-rapidapi-host': 'google-search3.p.rapidapi.com',
-						'x-rapidapi-key':
-							'9a6015cf11msh13de538a31730c3p1c8457jsn93b4c99001f4',
-					},
-				}
+				`https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${CONTEXT_KEY}&q=${context.query.term}&start=${startIndex}`
 		  )
 				.then((response) => response.json())
 				.catch((err) => {
